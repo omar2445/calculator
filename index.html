@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div class="cont">
+    <div class="calculator">
+        <div id="input">
+        </div>
+        <div id="clearDelet">
+            <button onclick="clearInput()" id="clear">Clear</button>
+            <button onclick="clearDelet()" id="delet">+/-</button>
+        </div>
+        <div id="buttons">
+            <button onclick="setValue(7)">7</button>
+            <button onclick="setValue(8)">8</button>
+            <button onclick="setValue(9)">9</button>
+            <button id="op" onclick="opclicked('÷')">÷</button>
+            <button onclick="setValue(4)">4</button>
+            <button onclick="setValue(5)">5</button>
+            <button onclick="setValue(6)">6</button>
+            <button id="op" onclick="opclicked('×')">×</button>
+            <button onclick="setValue(1)">1</button>
+            <button onclick="setValue(2)">2</button>
+            <button onclick="setValue(3)">3</button>
+            <button id="op" onclick="opclicked('-')">-</button>
+            <button onclick="setValue('.')">.</button>
+            <button onclick="setValue(0)">0</button>
+            <button id="eq">=</button>
+            <button id="op" onclick="opclicked('+')">+</button>
+        </div>
+    </div>
+</div>
+    <script src="javascript.js"></script>
+</body>
+</html>
