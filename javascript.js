@@ -26,7 +26,11 @@ const clearInput = function(){
 //delet function 
 const clearDelet = function(){
     if(val1 === ''){
-        document.getElementById("input").textContent +=0;
+        document.getElementById("input").textContent +='-';
+        val1+='-';
+    }
+    else{
+        operators(val1,val2,'-');
     }
     
 }
@@ -39,8 +43,8 @@ const getFieldValue= function(){
 //wright the value whene btn clicked
 const setValue = function(a){
     if(sighn === undefined){
-        document.getElementById("input").textContent += a;
-        val1+=a;
+            document.getElementById("input").textContent += a;
+            val1+=a;
     }
     else{
         val2+=a;
@@ -80,9 +84,19 @@ function operators(a,b,op) {
             sighn=undefined;
         }
 }
-const opclicked= function(pmsd){
-    sighn = pmsd;
+const opclicked= function(inp){
+    if(val1!='' && val2==''){
+        sighn = inp;
+    }
+    else if(val1!=''&&val2!=''){
+        operators(parseFloat(val1),parseFloat(val2),sighn);
+        sighn = inp;
+    }
+    else{
+        alert("invalid format yoused!")
+    }
+    
 }
 equal.addEventListener('click',function al(){
     operators(parseFloat(val1),parseFloat(val2),sighn);
-});
+})
